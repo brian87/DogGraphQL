@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 import com.brain.dogGraphQL.entity.Dog;
 import com.brain.dogGraphQL.exception.DogNotFoundException;
 import com.brain.dogGraphQL.repository.DogRepository;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
 @Component
-public class Query {
+public class Query implements GraphQLQueryResolver {
 	private DogRepository dogRepository;
 	
 	public Query(DogRepository dogRepository) {

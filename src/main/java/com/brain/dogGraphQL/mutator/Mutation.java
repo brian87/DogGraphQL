@@ -2,12 +2,15 @@ package com.brain.dogGraphQL.mutator;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Component;
+
 import com.brain.dogGraphQL.entity.Dog;
 import com.brain.dogGraphQL.exception.BreedNotFoundException;
 import com.brain.dogGraphQL.exception.DogNotFoundException;
 import com.brain.dogGraphQL.repository.DogRepository;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 
+@Component
 public class Mutation implements GraphQLMutationResolver {
 	private DogRepository dogRepository;
 	
